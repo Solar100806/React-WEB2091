@@ -1,8 +1,35 @@
 import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import { Button } from "antd";
-
+import { Form, Button, Input, Layout, Table, Modal } from "antd";
+const { Header, Content, Footer, Sider } = Layout;
 function App() {
+  const onFinish = (values: any) => {
+    console.log(values);
+  };
+
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+    },
+  ];
+
+  const data = [
+    {
+      key: 1,
+      name: "Hiếu",
+      age: 19,
+    },
+    {
+      key: 2,
+      name: "Ngọc",
+      age: 20,
+    },
+  ];
   return (
     <>
       <nav className="bg-blue-600 text-white shadow">
@@ -38,10 +65,36 @@ function App() {
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
         <Button type="primary">Click me</Button>
-        <Button type="default">Click me</Button>
+        {/* <Button type="default">Click me</Button>
         <Button type="dashed">Click me</Button>
         <Button type="link">Click me</Button>
-        <Button type="text">Click me</Button>
+        <Button type="text">Click me</Button> */}
+        <Layout>
+          <Header style={{ color: "white" }}>Header</Header>
+          <Content style={{ padding: 20 }}>Content</Content>
+          <Modal title="Thêm người dùng mới">
+            <Form onFinish={onFinish}>
+              <Form.Item label="Username">
+                <Input placeholder="username" />
+              </Form.Item>
+              <Form.Item label="Email">
+                <Input placeholder="email" />
+              </Form.Item>
+              <Form.Item label="Password">
+                <Input placeholder="password" />
+              </Form.Item>
+              <Form.Item>
+                <Button htmlType="submit" type="primary">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          </Modal>
+          <Sider style={{ padding: 20 }}>
+            <Table columns={columns} dataSource={data}></Table>
+          </Sider>
+          <Footer>Footer</Footer>
+        </Layout>
       </div>
       <Toaster />
     </>
