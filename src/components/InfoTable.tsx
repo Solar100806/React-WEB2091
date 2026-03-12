@@ -22,6 +22,9 @@ function InfoTable() {
             title: "Status",
             dataIndex: "status",
             key: "status",
+            render: (status: string) => {
+                return <span style={{ color: status === "Active" ? "green" : "red" }}>{status}</span>
+            }
         },
         {
             title: "Action",
@@ -50,4 +53,4 @@ function InfoTable() {
     return <div><Table columns={columns} dataSource={data} bordered/></div>;
 }
 
-export default InfoTable;
+export default InfoTable; 

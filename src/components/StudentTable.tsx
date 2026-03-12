@@ -27,7 +27,7 @@ const StudentTable = () => {
     <Table 
       columns={columns} 
       dataSource={data} 
-      pagination={{ pageSize: 5 }} 
+      pagination={{ pageSize: 3 }} 
       bordered 
     />
   );
