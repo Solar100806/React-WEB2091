@@ -10,6 +10,10 @@ function App() {
 
   const columns = [
     {
+      title: "ID",
+      dataIndex: "key",
+    },
+    {
       title: "Name",
       dataIndex: "name",
     },
