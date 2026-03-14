@@ -4,6 +4,7 @@ import { Form, Button, Input, Layout, Modal } from "antd";
 import { useState } from "react";
 import StudentTable from "./components/StudentTable";
 import InfoTable from "./components/InfoTable";
+import Lab2 from "./components/Lab2";
 
 const { Header, Content, Footer } = Layout;
 
@@ -27,7 +28,7 @@ function App() {
         </div>
       </nav>
 
-      <div className="max-w-6xl mx-auto mt-10 px-4">
+      {/* <div className="max-w-6xl mx-auto mt-10 px-4">
         <Layout className="bg-white p-6 shadow-lg rounded-xl">
           <Header className="bg-blue-500 text-white text-center text-lg rounded-t-xl">
             DANH SÁCH SINH VIÊN
@@ -45,7 +46,7 @@ function App() {
             ©2026 - WEB2091 - FPT Polytechnic
           </Footer>
         </Layout>
-      </div>
+      </div> */}
 
       <Modal 
         title="Thêm sinh viên mới" 
@@ -65,6 +66,7 @@ function App() {
       </Modal>
 
       <Toaster />
+      <Lab2 />
     </div>
   );
 }
