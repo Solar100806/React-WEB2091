@@ -4,7 +4,9 @@ import { Form, Button, Input, Layout, Modal } from "antd";
 import { useState } from "react";
 import StudentTable from "./components/StudentTable";
 import InfoTable from "./components/InfoTable";
-import Lab2 from "./components/Lab2";
+import Login from "./components/lab3/Login";
+import Register from "./components/lab3/Register";
+import ProductForm from "./components/lab3/ProductForm";
 
 const { Header, Content, Footer } = Layout;
 
@@ -66,7 +68,9 @@ function App() {
       </Modal>
 
       <Toaster />
-      <Lab2 />
+      <Login/>
+      <Register/>
+      <ProductForm/>
     </div>
   );
 }

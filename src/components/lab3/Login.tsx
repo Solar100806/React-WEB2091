@@ -1,13 +1,13 @@
 import { Button, Card, Form, Input } from "antd";
 
-function Lab2() {
+function Login() {
   const onFinish = (value: any) => {
     console.log(value);
   };
 
   return (
     <Card
-      title="Đăng nhập"
+      title="Bài 1: Đăng nhập"
       style={{ maxWidth: 400, margin: "20px auto" }}
     >
       <Form name="login" onFinish={onFinish} layout="vertical">
@@ -37,4 +37,4 @@ function Lab2() {
   );
 }
 
-export default Lab2;
+export default Login;
